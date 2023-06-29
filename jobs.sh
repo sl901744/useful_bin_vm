@@ -1,5 +1,12 @@
 #!/bin/bash
+if [ -z $1 ]; then
+	ns="private-shichao-liu"
+else
+	ns="lsc"
+fi
 
-kubectl -n lsc get pod
+echo "Listing jobs in \"${ns}\" namespace..."
 
-kbatch -n lsc list
+kubectl -n $ns get pod
+
+kbatch -n $ns list
