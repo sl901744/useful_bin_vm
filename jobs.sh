@@ -1,8 +1,8 @@
 #!/bin/bash
 if [ -z $1 ]; then
-	ns="private-shichao-liu"
-else
 	ns="lsc"
+else
+	ns="private-shichao-liu"
 fi
 
 echo "Listing jobs in \"${ns}\" namespace..."
